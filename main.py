@@ -69,10 +69,10 @@ class RobsFundamentalUniverseSelectionModel(FundamentalUniverseSelectionModel):
                                             or x.CompanyReference.CountryId == "DEU"
                                             or x.CompanyReference.CountryId == "FRA")
                                         and x.MarketCap > 2000000000
-                                        and x.ValuationRatios.PERatio < 25
-                                        and x.ValuationRatios.PERatio >= 0
-                                        and x.ValuationRatios.EVToEBITDA < 25
-                                        and x.ValuationRatios.EVToEBITDA >= 0
+                                        and x.ValuationRatios.PERatio <= 25
+                                        and x.ValuationRatios.PERatio > 0
+                                        and x.ValuationRatios.EVToEBITDA <= 25
+                                        and x.ValuationRatios.EVToEBITDA > 0
                                         and x.OperationRatios.QuickRatio.OneYear >= 1
                                         and x.FinancialStatements.BalanceSheet.NetDebt.TwelveMonths < 3.5 * x.FinancialStatements.IncomeStatement.EBITDA.TwelveMonths
                                         and x.OperationRatios.RevenueGrowth.ThreeYears > 0.07
