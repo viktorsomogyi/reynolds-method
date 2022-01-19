@@ -1,7 +1,7 @@
 from AlgorithmImports import *
 from Selection.FundamentalUniverseSelectionModel import FundamentalUniverseSelectionModel
 
-class AlphaLegionAlgorithm(QCAlgorithm):
+class ReynoldsMethodAlgorithm(QCAlgorithm):
 
     def Initialize(self):
         self.SetStartDate(1997, 1, 1)
